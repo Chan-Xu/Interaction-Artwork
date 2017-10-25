@@ -1,5 +1,6 @@
 var img1;
 var img2;
+var img3;
 
 var pills = [];
 var score;
@@ -10,6 +11,7 @@ var sceneNum = 0;
 function preload() {
     img1 = loadImage("assets/patient.png");
     img2 = loadImage("assets/logo.png");
+    img3 = loadImage("assets/mouth.png");
 }
 
 function setup() {
@@ -23,7 +25,7 @@ function setup() {
 }
 
 function draw() {
-    // your "draw loop" code goes here
+    //your "draw loop" code goes here
     if(sceneNum == 0) {
       scene1();
     } else if (sceneNum == 1) {
@@ -31,6 +33,7 @@ function draw() {
     } else if (sceneNum == 2) {
       scene3();
     }
+//    scene3();
 
 //    drawPixels();
 }
@@ -78,7 +81,7 @@ function scene2() {
     fill(255);
     text("DOCTOR", width/4, height*2/5);
 
-//    image(img2, width/2, height/10, width/5, width/5);
+    image(img2, width*3/5, height/10, width/8, width/8);
     image(img1, width/2, height/4, width/3, height*3/4);
 
     /* dialogs*/
@@ -94,10 +97,14 @@ function scene2() {
 /* -----scene3----------*/
 function scene3() {
   background(0);
+  if (mouseX < width && mouseY < height) {
+    noCursor();
+    image(img3,mouseX,mouseY,50,50)
+  }
 
   if (frameCount % 60 === 0)
     if (random() > 0.6)
-      pills.push(new Pill(random(width / 2), (random() > 0.8)));
+      pills.push(new Pill(random(width / 2), (random() > 0.5)));
 
   if (frameCount % 600 === 0)
     speed++;
@@ -114,8 +121,10 @@ function scene3() {
 
 /* draw score */
   fill(255);
+  textFont("Times New Roman");
   noStroke();
-  text(score, 10, 40);
+  textSize(20);
+  text("Number of pills: "+score, 10, 40);
 
   if (!playing) {
     fill(255);
