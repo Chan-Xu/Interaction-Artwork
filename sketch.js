@@ -4,13 +4,14 @@ var img3;
 var img4;
 var img5;
 var img6;
+var diaNum = 0;
 
 
 var pills = [];
 var score;
 var playing; // aids with asychronous endGame() function
 
-var sceneNum = 21;
+var sceneNum = 1;
 var bottle;
 
 function preload() {
@@ -45,22 +46,39 @@ function setup() {
 
 function draw() {
     //your "draw loop" code goes here
-    // if(sceneNum == 1) {
-    //   scene1();
-    // } else if (sceneNum == 2) {
-    //   scene2();
-    // } else if (sceneNum == 21) {
-    //   scene21();
-    // } else if (sceneNum == 22) {
-    //   scene22();
-    // } else if (sceneNum == 31) {
-    //   scene31();
-    // } else if (sceneNum == 32) {
-    //   scene32();
-    // }
-    scene21();
+    if(sceneNum == 1) {
+      scene1();
+    } else if (sceneNum == 2) {
+      scene2();
+    } else if (sceneNum == 21) {
+      scene21();
+    } else if (sceneNum == 22) {
+      scene22();
+    } else if (sceneNum == 31) {
+      scene31();
+    } else if (sceneNum == 32) {
+      scene32();
+    }
+//    scene21();
 
-    drawPixels();
+//    drawPixels();
+}
+
+function keyPressed() {
+  if(sceneNum == 1) {
+    sceneNum = 2;
+    diaNum = 0;
+  } else if (sceneNum == 2) {
+    diaNum += 1;
+  } else if (sceneNum == 21) {
+
+  } else if (sceneNum == 22) {
+
+  } else if (sceneNum == 31) {
+
+  } else if (sceneNum == 32) {
+
+  }
 }
 
 function drawPixels() {
@@ -87,9 +105,10 @@ function scene1() {
       textSize(15);
       text("Press any key to START...", width/3, height*2/3);
     }
-    if (keyIsPressed === true) {
-      sceneNum = 2;
-    }
+    // if (keyIsPressed === true) {
+    //   sceneNum = 2;
+    //   diaNum = 0;
+    // }
 }
 
 
@@ -134,29 +153,39 @@ function scene2() {
 
 
     /* dialogs*/
-    fill(255);
-    ellipse(width*2/5, height*3/7, width/7, width/14);
-    fill(255);
-    ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
-    fill(0);
-    textSize(15);
-    text("Good morning. Dr.Smith!", width*2/5-width/14, height*3/7-20, width/7);
-    textSize(10);
-    text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
 
-    // if (keyIsPressed) {
-    //
+
+
+
+
+    if (diaNum == 0) {
+      fill(255);
+      ellipse(width*2/5, height*3/7, width/7, width/14);
+      fill(255);
+      ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
+      fill(0);
+      textSize(15);
+      text("Good morning. Dr.Smith!", width*2/5-width/14, height*3/7-20, width/7);
+      textSize(10);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+    } else if (diaNum == 1) {
+      fill(255);
+      ellipse(width*3/5, height*3/7, width/7, width/14);
+      fill(255);
+      ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
+      fill(0);
+      textSize(15);
+      text("Good morning. What's wrong with you?", width*3/5-width/14, height*3/7-20, width/7);
+      textSize(10);
+      text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
+    }
+
+
+    // if (keyIsPressed == true) {
+    //   diaNum += 1;
     // }
 
-    fill(255);
-    ellipse(width*3/5, height*3/7, width/7, width/14);
-    fill(255);
-    ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
-    fill(0);
-    textSize(15);
-    text("Good morning. What's wrong with you?", width*3/5-width/14, height*3/7-20, width/7);
-    textSize(10);
-    text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
+
 
     // text("All right, you should eat 5 red pills. please go with me.(choose one door)")
     // text("I have been suffering from fever since yesterday.")
@@ -216,28 +245,22 @@ function scene21() {
   drawBottles(bottle);
 
   /* If medicine bottle is on the patient, then go to scene31*/
-
-
-}
-
-function mousePressed() {
-  // Function is called automatically when mouse is pressed
-  if (onBottle(bottle)) {
-    bottle.dragging = true;
-    bottle.lastx = bottle.x;
-    bottle.lasty = bottle.y;
+  if (bottle.x > width*3/5 && bottle.x<width*3/5+width/4 && bottle.y>0 && bottle.y<height*4/5) {
+    sceneNum = 31;
   }
+
 }
+
 
 function mouseReleased() {
   // Function is called automatically when mouse is released
-  if (onBottle(bottle)) {
+  if (bottle.dragging == true) {
     bottle.dragging = false;
   }
 }
 
 function onBottle(b) {
-  pos = mouseX < (b.x+b.size/2) && mouseX > (b.x-b.size/2) && mouseY < (b.y + b.size/2) && mouseY > (b.y-b.size/2);
+  pos = mouseX < (b.x+b.size) && mouseX > (b.x-b.size) && mouseY < (b.y + b.size) && mouseY > (b.y-b.size);
   return pos;
 }
 
@@ -276,10 +299,6 @@ function scene22() {
       pills.splice(i, 1);
       score++;
     }
-
-    if (score == 2) {
-      sceneNum == 4;
-    }
 }
 
 /* draw score */
@@ -297,11 +316,14 @@ function scene22() {
     text("Take wrong medicine!", width / 2, height / 2);
     textSize(30);
     text("Press any key to START...", width/3, height*2/3);
-
-/* If take right pills(5 pills), then go to scene31*/
-
-
   }
+
+  /* If take right pills(5 pills), then go to scene32*/
+  /*If capture 1 pill, go to scene32 */
+    if (score == 1) {
+      sceneNum == 32;
+    }
+
 }
 
 function mousePressed() {
@@ -312,6 +334,13 @@ function mousePressed() {
     if (pills[i].captured && pills[i].type)
       endGame();
   }
+
+  if (onBottle(bottle)) {
+    bottle.dragging = true;
+    bottle.lastx = bottle.x;
+    bottle.lasty = bottle.y;
+  }
+
 }
 
 function endGame() {
@@ -342,7 +371,7 @@ function scene31() {
   textSize(28);
   fill(255,0,0);
   text(words2.substring(0, frameCount/2), width/4, height/4, width/2, height/2);
-  if (frameCount > 800) {
+  if (frameCount > 500) {
     textSize(15);
     text("Press any key to let time flow backwards...", width/3, height*2/3);
   }
