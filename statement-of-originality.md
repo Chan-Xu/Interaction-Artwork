@@ -7,4 +7,8 @@ project is entirely my own work, with the following exceptions:
 
 ## Code
 
+
 ## Assets
+  - cabinet.png, dead.png, gene.png, hand.png, logo.png, medicine.png, patient.png and patient1.png are all from [pngtree] (https://pngtree.com/)
+
+  license:https://pngtree.com/privacy-policy
