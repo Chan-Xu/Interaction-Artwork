@@ -236,7 +236,7 @@ function scenePer2() {
     textSize(45);
     fill(255, 0, 0);
     text("Gene Therapy", width/5, height/10);
-    textSize(15);
+    textSize(20);
     fill(255);
     text("Please press any key to know the outcome...", width*4/5, height*4/5);
     var x = width/4.5 + random(-2, 2);
@@ -253,9 +253,9 @@ function scenePer4() {
     textSize(45);
     fill(255, 0, 0);
     text("Gene Therapy", width/5, height/10);
-    textSize(25);
+    textSize(20);
     fill(255);
-    text("Please press any key to know the outcome...", width*3/5, height*4/5);
+    text("Please press any key to know the outcome...", width*4/5, height*4/5);
     var x = width/4.5 + random(-2, 2);
     var y = height/10 + random(-2, 2);
     var size = width/2.3;
@@ -269,9 +269,9 @@ function scenePer5() {
     textSize(45);
     fill(255, 0, 0);
     text("Gene Therapy", width/5, height/10);
-    textSize(25);
+    textSize(20);
     fill(255);
-    text("Please press any key to know the outcome...", width*3/5, height*4/5);
+    text("Please press any key to know the outcome...", width*4/5, height*4/5);
     var x = width/4.5 + random(-2, 2);
     var y = height/10 + random(-2, 2);
     var size = width/2.3;

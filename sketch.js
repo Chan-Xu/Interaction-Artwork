@@ -154,6 +154,8 @@ function scene1() {
     textFont("Times New Roman");
     textAlign(CENTER);
     textSize(40);
+    fill(255, 255, 0);
+    text("One Day to Become A Doctor", width/2, height/10);
     fill(255);
     text(words0.substring(0, frameCount/2), width/4, height/4, width/2, height/2);
     if (frameCount > 500) {
@@ -287,11 +289,11 @@ function sceneOut1() {
     background(0);
     textFont("Times New Roman");
     textAlign(CENTER);
-    textSize(28);
+    textSize(30);
     fill(255);
     text(words1.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
     if (frameCount > 500) {
-      textSize(15);
+      textSize(20);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
 }
@@ -426,11 +428,11 @@ function sceneOut3() {
     cursor();
     background(0);
     textFont("Times New Roman");
-    textSize(28);
+    textSize(30);
     fill(255);
     text(words3.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
     if (frameCount > 500) {
-      textSize(15);
+      textSize(20);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
 }
@@ -443,11 +445,11 @@ function sceneOut4() {
     cursor();
     background(0);
     textFont("Times New Roman");
-    textSize(28);
+    textSize(30);
     fill(255);
     text(words4.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
     if (frameCount > 500) {
-      textSize(15);
+      textSize(20);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
 }
@@ -520,7 +522,7 @@ function scene23() {
       textSize(20);
       text("I was diagnosed with cancer and I have only three months to live.", width*2/5-width/14, height*3/7-20, width/7);
       textSize(15);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+40,width/7);
     } else if (diaNum == 3) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
@@ -530,7 +532,7 @@ function scene23() {
       textSize(20);
       text("Sorry to hear that. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
       textSize(15);
-      text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
+      text("Press any key to continue...", width*3/5-width/14, height*3/7+40,width/7);
     } else if (diaNum == 4) {
       fill(255);
       ellipse(width*2/5, height*3/7, width/7, width/14);
@@ -550,7 +552,7 @@ function scene23() {
       textSize(20);
       text("Ok, I will take you to one of the room, please follow with me.", width*3/5-width/14, height*3/7-20, width/7.5);
       textSize(15);
-      text("Hint: Push one door...", width*3/5-width/14, height*3/7+20,width/7);
+      text("Hint: Push one door...", width*3/5-width/14, height*3/7+40,width/7);
     }
 
     /* push doors */
@@ -576,12 +578,12 @@ function sceneOut5() {
     cursor();
     background(0);
     textFont("Times New Roman");
-    textSize(28);
+    textSize(30);
     fill(255);
     text(words5.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
     image(img8, width/3.5, height/3.5, width/3, width/3);
     if (frameCount > 500) {
-      textSize(15);
+      textSize(20);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
 }
@@ -654,7 +656,7 @@ function scene24() {
       textSize(20);
       text("I was diagnosed with cancer and I have only three months to live.", width*2/5-width/14, height*3/7-20, width/7);
       textSize(15);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+40,width/7);
     } else if (diaNum == 3) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
@@ -664,7 +666,7 @@ function scene24() {
       textSize(20);
       text("Sorry to hear that. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
       textSize(15);
-      text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
+      text("Press any key to continue...", width*3/5-width/14, height*3/7+40,width/7);
     } else if (diaNum == 4) {
       fill(255);
       ellipse(width*2/5, height*3/7, width/7, width/14);
@@ -684,7 +686,7 @@ function scene24() {
       textSize(20);
       text("Ok, I will take you to one of the room, please follow with me.", width*3/5-width/14, height*3/7-20, width/7.5);
       textSize(15);
-      text("Hint: Push one door...", width*3/5-width/14, height*3/7+20,width/7);
+      text("Hint: Push one door...", width*3/5-width/14, height*3/7+40,width/7);
     }
 
     /* push doors */
@@ -715,12 +717,12 @@ function sceneOut7() {
     cursor();
     background(0);
     textFont("Times New Roman");
-    textSize(28);
+    textSize(30);
     fill(255);
     text(words7.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
     image(img8, width/3.5, height/3.5, width/3, width/3);
     if (frameCount > 500) {
-      textSize(15);
+      textSize(20);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
 }
@@ -733,12 +735,12 @@ function sceneOut8() {
     cursor();
     background(0);
     textFont("Times New Roman");
-    textSize(28);
+    textSize(30);
     fill(255);
     text(words8.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
     image(img8, width/3.5, height/3.5, width/3, width/3);
     if (frameCount > 500) {
-      textSize(15);
+      textSize(20);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
 }
@@ -811,7 +813,7 @@ function scene25() {
       textSize(20);
       text("I was diagnosed with cancer and I have only three months to live.", width*2/5-width/14, height*3/7-20, width/7);
       textSize(15);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+40,width/7);
     } else if (diaNum == 3) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
@@ -821,7 +823,7 @@ function scene25() {
       textSize(20);
       text("Sorry to hear that. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
       textSize(15);
-      text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
+      text("Press any key to continue...", width*3/5-width/14, height*3/7+40,width/7);
     } else if (diaNum == 4) {
       fill(255);
       ellipse(width*2/5, height*3/7, width/7, width/14);
@@ -841,7 +843,7 @@ function scene25() {
       textSize(20);
       text("Ok, I will take you to one of the room, please follow with me.", width*3/5-width/14, height*3/7-20, width/7.5);
       textSize(15);
-      text("Hint: Push one door...", width*3/5-width/14, height*3/7+20,width/7);
+      text("Hint: Push one door...", width*3/5-width/14, height*3/7+40,width/7);
     }
 
     /* push doors */
@@ -872,12 +874,12 @@ function sceneOut9() {
     cursor();
     background(0);
     textFont("Times New Roman");
-    textSize(28);
+    textSize(30);
     fill(255);
     text(words9.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
     image(img8, width/3.5, height/3.5, width/3, width/3);
     if (frameCount > 500) {
-      textSize(15);
+      textSize(20);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
 }
@@ -890,11 +892,11 @@ function sceneOut10() {
     cursor();
     background(0);
     textFont("Times New Roman");
-    textSize(28);
+    textSize(30);
     fill(255);
     text(words10.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
     if (frameCount > 500) {
-      textSize(15);
+      textSize(20);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
 }
