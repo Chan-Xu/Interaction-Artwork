@@ -50,11 +50,6 @@ function setup() {
 
 
 function draw() {
-
-
-  if (key === " ") {
-    saveCanvas("thumbnail.png");
-  }
     //your "draw loop" code goes here
     if(sceneNum == 1) {
       scene1();
@@ -162,7 +157,6 @@ function scene1() {
       textSize(15);
       text("Press any key to START...", width*3/4, height*3/4);
     }
-
 }
 
 
@@ -200,7 +194,7 @@ function scene21() {
     fill(255);
     text("Personalized medical room", width*5/7+width/15, height/3, 50);
 
-    image(img1, width*2/5, height*2/5, width/4, height*3/5);  // the doctor and patient
+    image(img1, width*2/5, height*2/5, width/4, height*3/5);  // the doctor and the patient
     image(img2, width/2.2, height/10, width/12, width/12);  // the hospital logo
 
     /* dialogs*/

@@ -1,5 +1,5 @@
 /**
- * Normal medicine scenes
+ * Normal medical scenes
 */
 
 /* -----sceneNor1----------*/
@@ -20,7 +20,6 @@ function sceneNor1() {
       image(img3, mouseX-40, mouseY-40, 80, 80)
     }
 
-
     /* medicine bottles */
     image(img6,width/5.5, height/10, 120, 120);
     image(img6,width/3.5, height/10, 120, 120);
@@ -35,13 +34,14 @@ function sceneNor1() {
     image(img6,width/3.5, height/1.53, 120, 120);
     drawBottles(bottle);
 
-
     /* If medicine bottle is on the patient, then go to scene31*/
     if (bottle.x > width*3/5) {
       sceneNum = 41;
     }
 
 }
+
+
 
 
 /* -----sceneNor2----------*/
@@ -62,7 +62,6 @@ function sceneNor2() {
       image(img3, mouseX-40, mouseY-40, 80, 80)
     }
 
-
     /* medicine bottles */
     image(img6,width/5.5, height/10, 120, 120);
     image(img6,width/3.5, height/10, 120, 120);
@@ -80,13 +79,14 @@ function sceneNor2() {
     bottle.y = height/10;
     drawBottles(bottle);
 
-
     /* If medicine bottle is on the patient, then go to scene31*/
     if (bottle.x > width*3/5) {
       sceneNum = 43;
     }
 
 }
+
+
 
 
 /* -----sceneNor3----------*/
@@ -107,7 +107,6 @@ function sceneNor3() {
       image(img3, mouseX-40, mouseY-40, 80, 80)
     }
 
-
     /* medicine bottles */
     image(img6,width/5.5, height/10, 120, 120);
     image(img6,width/3.5, height/10, 120, 120);
@@ -125,13 +124,13 @@ function sceneNor3() {
     bottle.y = height/10;
     drawBottles(bottle);
 
-
     /* If medicine bottle is on the patient, then go to scene31*/
     if (bottle.x > width*3/5) {
       sceneNum = 45;
     }
-
 }
+
+
 
 
 /* -----sceneNor4----------*/
@@ -152,7 +151,6 @@ function sceneNor4() {
       image(img3, mouseX-40, mouseY-40, 80, 80)
     }
 
-
     /* medicine bottles */
     image(img6,width/5.5, height/10, 120, 120);
     image(img6,width/3.5, height/10, 120, 120);
@@ -170,13 +168,14 @@ function sceneNor4() {
     bottle.y = height/10;
     drawBottles(bottle);
 
-
     /* If medicine bottle is on the patient, then go to scene31*/
     if (bottle.x > width*3/5) {
       sceneNum = 47;
     }
 
 }
+
+
 
 
 /* -----sceneNor5----------*/
@@ -197,7 +196,6 @@ function sceneNor5() {
       image(img3, mouseX-40, mouseY-40, 80, 80)
     }
 
-
     /* medicine bottles */
     image(img6,width/5.5, height/10, 120, 120);
     image(img6,width/3.5, height/10, 120, 120);
@@ -215,7 +213,6 @@ function sceneNor5() {
     bottle.y = height/10;
     drawBottles(bottle);
 
-
     /* If medicine bottle is on the patient, then go to scene31*/
     if (bottle.x > width*3/5) {
       sceneNum = 49;
@@ -227,8 +224,10 @@ function sceneNor5() {
 
 
 /**
- * Personalized medicine scenes
+ * Personalized medical scenes
 */
+
+/* -----scenePer2----------*/
 function scenePer2() {
     cursor();
     background(0);
@@ -246,6 +245,9 @@ function scenePer2() {
 }
 
 
+
+
+/* -----scenePer4----------*/
 function scenePer4() {
     cursor();
     background(0);
@@ -262,6 +264,10 @@ function scenePer4() {
     image(img7, x, y, size, size);
 }
 
+
+
+
+/* -----scenePer5----------*/
 function scenePer5() {
     cursor();
     background(0);
@@ -282,13 +288,11 @@ function scenePer5() {
 
 
 function mousePressed() {
-
     if (onBottle(bottle)) {
       bottle.dragging = true;
       bottle.lastx = bottle.x;
       bottle.lasty = bottle.y;
     }
-
 }
 
 
