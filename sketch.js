@@ -28,15 +28,15 @@ function preload() {
 function setup() {
     createCanvas(windowWidth, windowHeight);
     // any additional setup code goes here
-    words0 = "This is a personalized medical age, for different people to implement different medical treatment. That's to be a doctor one day! (Here, people should pay for treatment fee themselves.) "
-    words1 = "headache, no money, short time, live"
-    words3 = "headache, have money but free, short time, live"
-    words4 = "headache, have money and spend, long time, live"
-    words5 = "cancer, no money, short time, dead"
-    words7 = "cancer, have money but free, short time, dead"
-    words8 = "cancer, have money and spend, long time, dead"
-    words9 = "cancer, have money but free, short time, dead"
-    words10 = "cancer, have money and spend, long time, live"
+    words0 = "This is a personalized medical age, for different people to implement different medical treatment. The personalized medical care is very expensive to almost 1 million dollors, but normal medical care is free."+"\n"+"\n" +" OK, that's be an one day doctor now!"+"\n"+" (Here, the government will not cover the cost of treatment, but patients pay for themselves.) "
+    words1 = "Disease: headache"+"\n"+"Fee: free"+"\n"+"Treatment time: 5 days"+"\n"+"LIVE"
+    words3 = "Disease: headache"+"\n"+"Fee: free"+"\n"+"Treatment time: 5 days"+"\n"+"LIVE"
+    words4 = "Disease: headache"+"\n"+"Fee: 1 million dollors"+"\n"+"Treatment time: 2 months"+"\n"+"LIVE"
+    words5 = "Disease: cancer"+"\n"+"Fee: free"+"\n"+"Treatment time: 3 months"+"\n"+"DEAD"
+    words7 = "Disease: cancer"+"\n"+"Fee: free"+"\n"+"Treatment time: 3 months"+"\n"+"DEAD"
+    words8 = "Disease: cancer"+"\n"+"Fee: 1 million dollors"+"\n"+"Treatment time: 3 months"+"\n"+"DEAD (50% to survive)"
+    words9 = "Disease: cancer"+"\n"+"Fee: free"+"\n"+"Treatment time: 3 months"+"\n"+"DEAD"
+    words10 = "Disease: cancer"+"\n"+"Fee: 1 million dollors"+"\n"+"Treatment time: 6 months"+"\n"+"LIVE (50% to survive)"
 
     bottle = {x: width/13,
               y: height/12,
@@ -50,6 +50,11 @@ function setup() {
 
 
 function draw() {
+
+
+  if (key === " ") {
+    saveCanvas("thumbnail.png");
+  }
     //your "draw loop" code goes here
     if(sceneNum == 1) {
       scene1();
@@ -136,7 +141,7 @@ function keyPressed() {
     } else if (sceneNum == 242) {
       sceneNum = 48;
     } else if (sceneNum == 252) {
-      sceneNum = 210;
+      sceneNum = 410;
     }
 }
 
@@ -147,6 +152,7 @@ function keyPressed() {
 function scene1() {
     background(0);
     textFont("Times New Roman");
+    textAlign(CENTER);
     textSize(28);
     fill(255);
     text(words0.substring(0, frameCount/2), width/4, height/4, width/2, height/2);
@@ -280,9 +286,10 @@ function sceneOut1() {
     cursor();
     background(0);
     textFont("Times New Roman");
+    textAlign(CENTER);
     textSize(28);
-    fill(255,0,0);
-    text(words1.substring(0, frameCount/2), width/4, height/4, width/2, height/2);
+    fill(255);
+    text(words1.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
     if (frameCount > 500) {
       textSize(15);
       text("Press any key to continue...", width*3/4, height*3/4);
@@ -421,8 +428,8 @@ function sceneOut3() {
     textFont("Times New Roman");
     textSize(28);
     fill(255);
-    text(words3.substring(0, frameCount/2), width/4, height/4, width/2, height/2);
-    if (frameCount > 800) {
+    text(words3.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
+    if (frameCount > 500) {
       textSize(15);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
@@ -438,8 +445,8 @@ function sceneOut4() {
     textFont("Times New Roman");
     textSize(28);
     fill(255);
-    text(words4.substring(0, frameCount/2), width/4, height/4, width/2, height/2);
-    if (frameCount > 800) {
+    text(words4.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
+    if (frameCount > 500) {
       textSize(15);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
@@ -491,7 +498,7 @@ function scene23() {
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
       textSize(15);
-      text("Good noon. Dr.Smith! I am No3.", width*2/5-width/14, height*3/7-20, width/7);
+      text("Good morning. Dr.Smith! I am No3.", width*2/5-width/14, height*3/7-20, width/7);
       textSize(10);
       text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
     } else if (diaNum == 1) {
@@ -501,7 +508,7 @@ function scene23() {
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
       textSize(15);
-      text("Good noon. What's wrong with you?", width*3/5-width/14, height*3/7-20, width/7);
+      text("Good morning. What's wrong with you?", width*3/5-width/14, height*3/7-20, width/7);
       textSize(10);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 2) {
@@ -511,7 +518,7 @@ function scene23() {
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
       textSize(15);
-      text("I was diagnosed with cancer.", width*2/5-width/14, height*3/7-20, width/7);
+      text("I was diagnosed with cancer and I have only three months to live.", width*2/5-width/14, height*3/7-20, width/7);
       textSize(10);
       text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
     } else if (diaNum == 3) {
@@ -521,7 +528,7 @@ function scene23() {
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
       textSize(15);
-      text("All right. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
+      text("Sorry to hear that. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
       textSize(10);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 4) {
@@ -571,9 +578,9 @@ function sceneOut5() {
     textFont("Times New Roman");
     textSize(28);
     fill(255);
-    text(words5.substring(0, frameCount/2), width/4, height/4, width/2, height/2);
+    text(words5.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
     image(img8, width/3.5, height/3.5, width/3, width/3);
-    if (frameCount > 200) {
+    if (frameCount > 500) {
       textSize(15);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
@@ -645,7 +652,7 @@ function scene24() {
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
       textSize(15);
-      text("I was diagnosed with cancer.", width*2/5-width/14, height*3/7-20, width/7);
+      text("I was diagnosed with cancer and I have only three months to live.", width*2/5-width/14, height*3/7-20, width/7);
       textSize(10);
       text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
     } else if (diaNum == 3) {
@@ -655,7 +662,7 @@ function scene24() {
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
       textSize(15);
-      text("All right. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
+      text("Sorry to hear that. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
       textSize(10);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 4) {
@@ -710,9 +717,9 @@ function sceneOut7() {
     textFont("Times New Roman");
     textSize(28);
     fill(255);
-    text(words7.substring(0, frameCount/2), width/4, height/4, width/2, height/2);
+    text(words7.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
     image(img8, width/3.5, height/3.5, width/3, width/3);
-    if (frameCount > 800) {
+    if (frameCount > 500) {
       textSize(15);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
@@ -728,9 +735,9 @@ function sceneOut8() {
     textFont("Times New Roman");
     textSize(28);
     fill(255);
-    text(words8.substring(0, frameCount/2), width/4, height/4, width/2, height/2);
+    text(words8.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
     image(img8, width/3.5, height/3.5, width/3, width/3);
-    if (frameCount > 800) {
+    if (frameCount > 500) {
       textSize(15);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
@@ -802,7 +809,7 @@ function scene25() {
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
       textSize(15);
-      text("I was diagnosed with cancer.", width*2/5-width/14, height*3/7-20, width/7);
+      text("I was diagnosed with cancer and I have only three months to live.", width*2/5-width/14, height*3/7-20, width/7);
       textSize(10);
       text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
     } else if (diaNum == 3) {
@@ -812,7 +819,7 @@ function scene25() {
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
       textSize(15);
-      text("All right. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
+      text("Sorry to hear that. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
       textSize(10);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 4) {
@@ -867,9 +874,9 @@ function sceneOut9() {
     textFont("Times New Roman");
     textSize(28);
     fill(255);
-    text(words9.substring(0, frameCount/2), width/4, height/4, width/2, height/2);
+    text(words9.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
     image(img8, width/3.5, height/3.5, width/3, width/3);
-    if (frameCount > 800) {
+    if (frameCount > 500) {
       textSize(15);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
@@ -885,8 +892,8 @@ function sceneOut10() {
     textFont("Times New Roman");
     textSize(28);
     fill(255);
-    text(words10.substring(0, frameCount/2), width/4, height/4, width/2, height/2);
-    if (frameCount > 800) {
+    text(words10.substring(0, frameCount/10), width/4, height/4, width/2, height/2);
+    if (frameCount > 500) {
       textSize(15);
       text("Press any key to continue...", width*3/4, height*3/4);
     }
@@ -902,7 +909,7 @@ function scene3() {
     textAlign(CENTER);
     textFont("Times New Roman");
     textSize(50);
-    fill(255);
-    text("You have been an doctor one day.", width/2, height/2.5);
+    fill(150, 210, 255);
+    text("You have been an doctor for one day.", width/2, height/2.5);
     text("What did you learn?", width/2, height/2);
 }
