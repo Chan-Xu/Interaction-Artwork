@@ -38,12 +38,12 @@ function setup() {
     words9 = "Disease: cancer"+"\n"+"Fee: free"+"\n"+"Treatment time: 3 months"+"\n"+"DEAD"
     words10 = "Disease: cancer"+"\n"+"Fee: 1 million dollors"+"\n"+"Treatment time: 6 months"+"\n"+"LIVE (50% to survive)"
 
-    bottle = {x: width/13,
-              y: height/12,
+    bottle = {x: width/11,
+              y: height/10,
               size: 120,
               dragging: false,
-              lastx: width/13,
-              lasty: height/12};
+              lastx: width/11,
+              lasty: height/10};
 }
 
 
@@ -153,7 +153,7 @@ function scene1() {
     background(0);
     textFont("Times New Roman");
     textAlign(CENTER);
-    textSize(28);
+    textSize(40);
     fill(255);
     text(words0.substring(0, frameCount/2), width/4, height/4, width/2, height/2);
     if (frameCount > 500) {
@@ -182,7 +182,7 @@ function scene21() {
     rect(width/7+width/60, height/5+height/30, width/6-width/30, height*16/25-height/30);
     fill(0);
     ellipse(width/7+width/30, height*3/5, 20, 20);
-    textSize(20);
+    textSize(30);
     textAlign(CENTER);
     fill(255);
     text("Universal medical room", width/7+width/15, height/3, 50);
@@ -193,7 +193,7 @@ function scene21() {
     rect(width*5/7+width/60, height/5+height/30, width/6-width/30, height*16/25-height/30);
     fill(0);
     ellipse(width*5/7+width/30, height*3/5, 20, 20);
-    textSize(20);
+    textSize(30);
     textAlign(CENTER);
     fill(255);
     text("Personalized medical room", width*5/7+width/15, height/3, 50);
@@ -208,19 +208,19 @@ function scene21() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("Good morning. Dr.Smith! I am No.1.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 1) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("Good morning. What's wrong with you?", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
+      textSize(15);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 2) {
       fill(255);
@@ -228,19 +228,19 @@ function scene21() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("I have a headache.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 3) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("All right. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
+      textSize(15);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 4) {
       fill(255);
@@ -248,20 +248,20 @@ function scene21() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("I have no money.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 5) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
+      textSize(20);
+      text("Ok, I will take you to one of the room, please follow with me.", width*3/5-width/14, height*3/7-20, width/7.5);
       textSize(15);
-      text("Ok, I will take you to one of the rom, please follow with me.", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Hint: Push one door...", width*3/5-width/14, height*3/7+20,width/7);
+      text("Hint: Push one door...", width*3/5-width/14, height*3/7+40,width/7);
     }
 
     /* push doors */
@@ -315,7 +315,7 @@ function scene22() {
     rect(width/7+width/60, height/5+height/30, width/6-width/30, height*16/25-height/30);
     fill(0);
     ellipse(width/7+width/30, height*3/5, 20, 20);
-    textSize(20);
+    textSize(30);
     textAlign(CENTER);
     fill(255);
     text("Universal medical room", width/7+width/15, height/3, 50);
@@ -326,7 +326,7 @@ function scene22() {
     rect(width*5/7+width/60, height/5+height/30, width/6-width/30, height*16/25-height/30);
     fill(0);
     ellipse(width*5/7+width/30, height*3/5, 20, 20);
-    textSize(20);
+    textSize(30);
     textAlign(CENTER);
     fill(255);
     text("Personalized medical room", width*5/7+width/15, height/3, 50);
@@ -342,19 +342,19 @@ function scene22() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("Good morning. Dr.Smith! I am No.2.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 1) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("Good morning. What's wrong with you?", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
+      textSize(15);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 2) {
       fill(255);
@@ -362,19 +362,19 @@ function scene22() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("I have a headache.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 3) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("All right. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
+      textSize(15);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 4) {
       fill(255);
@@ -382,20 +382,20 @@ function scene22() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("I have 1 million dollors.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 5) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
+      textSize(20);
+      text("Ok, I will take you to one of the room, please follow with me.", width*3/5-width/14, height*3/7-20, width/7.5);
       textSize(15);
-      text("Ok, I will take you to one of the rom, please follow with me.", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Hint: Push one door...", width*3/5-width/14, height*3/7+20,width/7);
+      text("Hint: Push one door...", width*3/5-width/14, height*3/7+40,width/7);
     }
 
     /* push doors */
@@ -471,7 +471,7 @@ function scene23() {
     rect(width/7+width/60, height/5+height/30, width/6-width/30, height*16/25-height/30);
     fill(0);
     ellipse(width/7+width/30, height*3/5, 20, 20);
-    textSize(20);
+    textSize(30);
     textAlign(CENTER);
     fill(255);
     text("Universal medical room", width/7+width/15, height/3, 50);
@@ -482,7 +482,7 @@ function scene23() {
     rect(width*5/7+width/60, height/5+height/30, width/6-width/30, height*16/25-height/30);
     fill(0);
     ellipse(width*5/7+width/30, height*3/5, 20, 20);
-    textSize(20);
+    textSize(30);
     textAlign(CENTER);
     fill(255);
     text("Personalized medical room", width*5/7+width/15, height/3, 50);
@@ -497,19 +497,19 @@ function scene23() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("Good morning. Dr.Smith! I am No3.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 1) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("Good morning. What's wrong with you?", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
+      textSize(15);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 2) {
       fill(255);
@@ -517,19 +517,19 @@ function scene23() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("I was diagnosed with cancer and I have only three months to live.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 3) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("Sorry to hear that. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
+      textSize(15);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 4) {
       fill(255);
@@ -537,19 +537,19 @@ function scene23() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("I have no money.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 5) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
+      textSize(20);
+      text("Ok, I will take you to one of the room, please follow with me.", width*3/5-width/14, height*3/7-20, width/7.5);
       textSize(15);
-      text("Ok, I will take you to one of the rom, please follow with me.", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
       text("Hint: Push one door...", width*3/5-width/14, height*3/7+20,width/7);
     }
 
@@ -605,7 +605,7 @@ function scene24() {
     rect(width/7+width/60, height/5+height/30, width/6-width/30, height*16/25-height/30);
     fill(0);
     ellipse(width/7+width/30, height*3/5, 20, 20);
-    textSize(20);
+    textSize(30);
     textAlign(CENTER);
     fill(255);
     text("Universal medical room", width/7+width/15, height/3, 50);
@@ -616,7 +616,7 @@ function scene24() {
     rect(width*5/7+width/60, height/5+height/30, width/6-width/30, height*16/25-height/30);
     fill(0);
     ellipse(width*5/7+width/30, height*3/5, 20, 20);
-    textSize(20);
+    textSize(30);
     textAlign(CENTER);
     fill(255);
     text("Personalized medical room", width*5/7+width/15, height/3, 50);
@@ -631,19 +631,19 @@ function scene24() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("Good afternoon. Dr.Smith! I am No4.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 1) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("Good afternoon. What's wrong with you?", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
+      textSize(15);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 2) {
       fill(255);
@@ -651,19 +651,19 @@ function scene24() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("I was diagnosed with cancer and I have only three months to live.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 3) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("Sorry to hear that. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
+      textSize(15);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 4) {
       fill(255);
@@ -671,19 +671,19 @@ function scene24() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("I have 1 million dollors.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 5) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
+      textSize(20);
+      text("Ok, I will take you to one of the room, please follow with me.", width*3/5-width/14, height*3/7-20, width/7.5);
       textSize(15);
-      text("Ok, I will take you to one of the rom, please follow with me.", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
       text("Hint: Push one door...", width*3/5-width/14, height*3/7+20,width/7);
     }
 
@@ -762,7 +762,7 @@ function scene25() {
     rect(width/7+width/60, height/5+height/30, width/6-width/30, height*16/25-height/30);
     fill(0);
     ellipse(width/7+width/30, height*3/5, 20, 20);
-    textSize(20);
+    textSize(30);
     textAlign(CENTER);
     fill(255);
     text("Universal medical room", width/7+width/15, height/3, 50);
@@ -773,7 +773,7 @@ function scene25() {
     rect(width*5/7+width/60, height/5+height/30, width/6-width/30, height*16/25-height/30);
     fill(0);
     ellipse(width*5/7+width/30, height*3/5, 20, 20);
-    textSize(20);
+    textSize(30);
     textAlign(CENTER);
     fill(255);
     text("Personalized medical room", width*5/7+width/15, height/3, 50);
@@ -788,19 +788,19 @@ function scene25() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("Good afternoon. Dr.Smith! I am No5.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 1) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("Good afternoon. What's wrong with you?", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
+      textSize(15);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 2) {
       fill(255);
@@ -808,19 +808,19 @@ function scene25() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("I was diagnosed with cancer and I have only three months to live.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 3) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("Sorry to hear that. How much money do you have?", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
+      textSize(15);
       text("Press any key to continue...", width*3/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 4) {
       fill(255);
@@ -828,19 +828,19 @@ function scene25() {
       fill(255);
       ellipse(width*2/5+width/20, height*3/7+width/20,20,20);
       fill(0);
-      textSize(15);
+      textSize(20);
       text("I have 1 million dollors.", width*2/5-width/14, height*3/7-20, width/7);
-      textSize(10);
-      text("Press any key to continue...", width*2/5-width/14, height*3/7,width/7);
+      textSize(15);
+      text("Press any key to continue...", width*2/5-width/14, height*3/7+20,width/7);
     } else if (diaNum == 5) {
       fill(255);
       ellipse(width*3/5, height*3/7, width/7, width/14);
       fill(255);
       ellipse(width*3/5-width/40, height*3/7+width/20,20,20);
       fill(0);
+      textSize(20);
+      text("Ok, I will take you to one of the room, please follow with me.", width*3/5-width/14, height*3/7-20, width/7.5);
       textSize(15);
-      text("Ok, I will take you to one of the rom, please follow with me.", width*3/5-width/14, height*3/7-20, width/7);
-      textSize(10);
       text("Hint: Push one door...", width*3/5-width/14, height*3/7+20,width/7);
     }
 

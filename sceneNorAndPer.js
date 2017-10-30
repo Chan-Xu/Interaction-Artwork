@@ -22,17 +22,17 @@ function sceneNor1() {
 
 
     /* medicine bottles */
-    image(img6,width/6, height/12, 120, 120);
-    image(img6,width/3.9, height/12, 120, 120);
-    image(img6,width/13, height/3.6, 120, 120);
-    image(img6,width/6, height/3.6, 120, 120);
-    image(img6,width/3.9, height/3.6, 120, 120);
-    image(img6,width/13, height/2.15, 120, 120);
-    image(img6,width/6, height/2.15, 120, 120);
-    image(img6,width/3.9, height/2.15, 120, 120);
-    image(img6,width/13, height/1.53, 120, 120);
-    image(img6,width/6, height/1.53, 120, 120);
-    image(img6,width/3.9, height/1.53, 120, 120);
+    image(img6,width/5.5, height/10, 120, 120);
+    image(img6,width/3.5, height/10, 120, 120);
+    image(img6,width/11, height/3.6, 120, 120);
+    image(img6,width/5.5, height/3.6, 120, 120);
+    image(img6,width/3.5, height/3.6, 120, 120);
+    image(img6,width/11, height/2.15, 120, 120);
+    image(img6,width/5.5, height/2.15, 120, 120);
+    image(img6,width/3.5, height/2.15, 120, 120);
+    image(img6,width/11, height/1.53, 120, 120);
+    image(img6,width/5.5, height/1.53, 120, 120);
+    image(img6,width/3.5, height/1.53, 120, 120);
     drawBottles(bottle);
 
 
@@ -64,20 +64,20 @@ function sceneNor2() {
 
 
     /* medicine bottles */
-    image(img6,width/6, height/12, 120, 120);
-    image(img6,width/3.9, height/12, 120, 120);
-    image(img6,width/13, height/3.6, 120, 120);
-    image(img6,width/6, height/3.6, 120, 120);
-    image(img6,width/3.9, height/3.6, 120, 120);
-    image(img6,width/13, height/2.15, 120, 120);
-    image(img6,width/6, height/2.15, 120, 120);
-    image(img6,width/3.9, height/2.15, 120, 120);
-    image(img6,width/13, height/1.53, 120, 120);
-    image(img6,width/6, height/1.53, 120, 120);
-    image(img6,width/3.9, height/1.53, 120, 120);
+    image(img6,width/5.5, height/10, 120, 120);
+    image(img6,width/3.5, height/10, 120, 120);
+    image(img6,width/11, height/3.6, 120, 120);
+    image(img6,width/5.5, height/3.6, 120, 120);
+    image(img6,width/3.5, height/3.6, 120, 120);
+    image(img6,width/11, height/2.15, 120, 120);
+    image(img6,width/5.5, height/2.15, 120, 120);
+    image(img6,width/3.5, height/2.15, 120, 120);
+    image(img6,width/11, height/1.53, 120, 120);
+    image(img6,width/5.5, height/1.53, 120, 120);
+    image(img6,width/3.5, height/1.53, 120, 120);
 
-    bottle.x = width/13;
-    bottle.y = height/12;
+    bottle.x = width/11;
+    bottle.y = height/10;
     drawBottles(bottle);
 
 
@@ -109,20 +109,20 @@ function sceneNor3() {
 
 
     /* medicine bottles */
-    image(img6,width/6, height/12, 120, 120);
-    image(img6,width/3.9, height/12, 120, 120);
-    image(img6,width/13, height/3.6, 120, 120);
-    image(img6,width/6, height/3.6, 120, 120);
-    image(img6,width/3.9, height/3.6, 120, 120);
-    image(img6,width/13, height/2.15, 120, 120);
-    image(img6,width/6, height/2.15, 120, 120);
-    image(img6,width/3.9, height/2.15, 120, 120);
-    image(img6,width/13, height/1.53, 120, 120);
-    image(img6,width/6, height/1.53, 120, 120);
-    image(img6,width/3.9, height/1.53, 120, 120);
+    image(img6,width/5.5, height/10, 120, 120);
+    image(img6,width/3.5, height/10, 120, 120);
+    image(img6,width/11, height/3.6, 120, 120);
+    image(img6,width/5.5, height/3.6, 120, 120);
+    image(img6,width/3.5, height/3.6, 120, 120);
+    image(img6,width/11, height/2.15, 120, 120);
+    image(img6,width/5.5, height/2.15, 120, 120);
+    image(img6,width/3.5, height/2.15, 120, 120);
+    image(img6,width/11, height/1.53, 120, 120);
+    image(img6,width/5.5, height/1.53, 120, 120);
+    image(img6,width/3.5, height/1.53, 120, 120);
 
-    bottle.x = width/13;
-    bottle.y = height/12;
+    bottle.x = width/11;
+    bottle.y = height/10;
     drawBottles(bottle);
 
 
@@ -154,20 +154,20 @@ function sceneNor4() {
 
 
     /* medicine bottles */
-    image(img6,width/6, height/12, 120, 120);
-    image(img6,width/3.9, height/12, 120, 120);
-    image(img6,width/13, height/3.6, 120, 120);
-    image(img6,width/6, height/3.6, 120, 120);
-    image(img6,width/3.9, height/3.6, 120, 120);
-    image(img6,width/13, height/2.15, 120, 120);
-    image(img6,width/6, height/2.15, 120, 120);
-    image(img6,width/3.9, height/2.15, 120, 120);
-    image(img6,width/13, height/1.53, 120, 120);
-    image(img6,width/6, height/1.53, 120, 120);
-    image(img6,width/3.9, height/1.53, 120, 120);
+    image(img6,width/5.5, height/10, 120, 120);
+    image(img6,width/3.5, height/10, 120, 120);
+    image(img6,width/11, height/3.6, 120, 120);
+    image(img6,width/5.5, height/3.6, 120, 120);
+    image(img6,width/3.5, height/3.6, 120, 120);
+    image(img6,width/11, height/2.15, 120, 120);
+    image(img6,width/5.5, height/2.15, 120, 120);
+    image(img6,width/3.5, height/2.15, 120, 120);
+    image(img6,width/11, height/1.53, 120, 120);
+    image(img6,width/5.5, height/1.53, 120, 120);
+    image(img6,width/3.5, height/1.53, 120, 120);
 
-    bottle.x = width/13;
-    bottle.y = height/12;
+    bottle.x = width/11;
+    bottle.y = height/10;
     drawBottles(bottle);
 
 
@@ -199,20 +199,20 @@ function sceneNor5() {
 
 
     /* medicine bottles */
-    image(img6,width/6, height/12, 120, 120);
-    image(img6,width/3.9, height/12, 120, 120);
-    image(img6,width/13, height/3.6, 120, 120);
-    image(img6,width/6, height/3.6, 120, 120);
-    image(img6,width/3.9, height/3.6, 120, 120);
-    image(img6,width/13, height/2.15, 120, 120);
-    image(img6,width/6, height/2.15, 120, 120);
-    image(img6,width/3.9, height/2.15, 120, 120);
-    image(img6,width/13, height/1.53, 120, 120);
-    image(img6,width/6, height/1.53, 120, 120);
-    image(img6,width/3.9, height/1.53, 120, 120);
+    image(img6,width/5.5, height/10, 120, 120);
+    image(img6,width/3.5, height/10, 120, 120);
+    image(img6,width/11, height/3.6, 120, 120);
+    image(img6,width/5.5, height/3.6, 120, 120);
+    image(img6,width/3.5, height/3.6, 120, 120);
+    image(img6,width/11, height/2.15, 120, 120);
+    image(img6,width/5.5, height/2.15, 120, 120);
+    image(img6,width/3.5, height/2.15, 120, 120);
+    image(img6,width/11, height/1.53, 120, 120);
+    image(img6,width/5.5, height/1.53, 120, 120);
+    image(img6,width/3.5, height/1.53, 120, 120);
 
-    bottle.x = width/13;
-    bottle.y = height/12;
+    bottle.x = width/11;
+    bottle.y = height/10;
     drawBottles(bottle);
 
 
