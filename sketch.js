@@ -7,11 +7,7 @@ var img6;
 var img7;
 var img8;
 
-var bottle1;
-var bottle2;
-var bottle3;
-var bottle4;
-var bottle5;
+var bottle;
 
 var diaNum = 0;
 var sceneNum = 1;
@@ -27,40 +23,6 @@ function preload() {
     img7 = loadImage("assets/gene.png");
     img8 = loadImage("assets/dead.png");
 
-    bottle1 = {x: width/13,
-              y: height/12,
-              size: 120,
-              dragging: false,
-              lastx: width/13,
-              lasty: height/12};
-
-    bottle2 = {x: width/13,
-              y: height/12,
-              size: 120,
-              dragging: false,
-              lastx: width/13,
-              lasty: height/12};
-
-    bottle3 = {x: width/13,
-              y: height/12,
-              size: 120,
-              dragging: false,
-              lastx: width/13,
-              lasty: height/12};
-
-    bottle4 = {x: width/13,
-              y: height/12,
-              size: 120,
-              dragging: false,
-              lastx: width/13,
-              lasty: height/12};
-
-    bottle5 = {x: width/13,
-              y: height/12,
-              size: 120,
-              dragging: false,
-              lastx: width/13,
-              lasty: height/12};
 }
 
 function setup() {
@@ -76,9 +38,16 @@ function setup() {
     words9 = "cancer, have money but free, short time, dead"
     words10 = "cancer, have money and spend, long time, live"
 
-
-
+    bottle = {x: width/13,
+              y: height/12,
+              size: 120,
+              dragging: false,
+              lastx: width/13,
+              lasty: height/12};
 }
+
+
+
 
 function draw() {
     //your "draw loop" code goes here
@@ -129,10 +98,10 @@ function draw() {
     } else if (sceneNum == 3) {
       scene3();
     }
-    //sceneOut10();
-
-//    drawPixels();
 }
+
+
+
 
 function keyPressed() {
     if(sceneNum == 1) {
@@ -174,7 +143,6 @@ function keyPressed() {
 
 
 
-
 /* -----scene1----------*/
 function scene1() {
     background(0);
@@ -188,8 +156,6 @@ function scene1() {
     }
 
 }
-
-
 
 
 
@@ -228,7 +194,6 @@ function scene21() {
 
     image(img1, width*2/5, height*2/5, width/4, height*3/5);  // the doctor and patient
     image(img2, width/2.2, height/10, width/12, width/12);  // the hospital logo
-
 
     /* dialogs*/
     if (diaNum == 0) {
@@ -323,6 +288,8 @@ function sceneOut1() {
       text("Press any key to continue...", width*3/4, height*3/4);
     }
 }
+
+
 
 
 /* -----scene22----------*/
@@ -424,9 +391,6 @@ function scene22() {
       text("Hint: Push one door...", width*3/5-width/14, height*3/7+20,width/7);
     }
 
-
-
-
     /* push doors */
     if ((mouseX > width/7 && mouseX < width/7+width/6 &&
          mouseY > height/5 && mouseY < height*21/25) ||
@@ -447,6 +411,9 @@ function scene22() {
 
 }
 
+
+
+
 /* -----sceneOut3----------*/
 function sceneOut3() {
     cursor();
@@ -461,6 +428,9 @@ function sceneOut3() {
     }
 }
 
+
+
+
 /* -----sceneOut4----------*/
 function sceneOut4() {
     cursor();
@@ -474,6 +444,8 @@ function sceneOut4() {
       text("Press any key to continue...", width*3/4, height*3/4);
     }
 }
+
+
 
 
 /* -----scene23----------*/
@@ -510,7 +482,6 @@ function scene23() {
 
     image(img1, width*2/5, height*2/5, width/4, height*3/5);  // the doctor and patient
     image(img2, width/2.2, height/10, width/12, width/12);  // the hospital logo
-
 
     /* dialogs*/
     if (diaNum == 0) {
@@ -575,9 +546,6 @@ function scene23() {
       text("Hint: Push one door...", width*3/5-width/14, height*3/7+20,width/7);
     }
 
-
-
-
     /* push doors */
     if (mouseX > width/7 && mouseX < width/7+width/6 &&
          mouseY > height/5 && mouseY < height*21/25) {
@@ -593,6 +561,9 @@ function scene23() {
 
 }
 
+
+
+
 /* -----sceneOut5----------*/
 function sceneOut5() {
     cursor();
@@ -607,6 +578,8 @@ function sceneOut5() {
       text("Press any key to continue...", width*3/4, height*3/4);
     }
 }
+
+
 
 
 /* -----scene24----------*/
@@ -643,7 +616,6 @@ function scene24() {
 
     image(img1, width*2/5, height*2/5, width/4, height*3/5);  // the doctor and patient
     image(img2, width/2.2, height/10, width/12, width/12);  // the hospital logo
-
 
     /* dialogs*/
     if (diaNum == 0) {
@@ -708,9 +680,6 @@ function scene24() {
       text("Hint: Push one door...", width*3/5-width/14, height*3/7+20,width/7);
     }
 
-
-
-
     /* push doors */
     if ((mouseX > width/7 && mouseX < width/7+width/6 &&
          mouseY > height/5 && mouseY < height*21/25) ||
@@ -732,6 +701,8 @@ function scene24() {
 }
 
 
+
+
 /* -----sceneOut7----------*/
 function sceneOut7() {
     cursor();
@@ -747,6 +718,9 @@ function sceneOut7() {
     }
 }
 
+
+
+
 /* -----sceneOut8----------*/
 function sceneOut8() {
     cursor();
@@ -761,6 +735,9 @@ function sceneOut8() {
       text("Press any key to continue...", width*3/4, height*3/4);
     }
 }
+
+
+
 
 /* -----scene25----------*/
 function scene25() {
@@ -796,7 +773,6 @@ function scene25() {
 
     image(img1, width*2/5, height*2/5, width/4, height*3/5);  // the doctor and patient
     image(img2, width/2.2, height/10, width/12, width/12);  // the hospital logo
-
 
     /* dialogs*/
     if (diaNum == 0) {
@@ -861,9 +837,6 @@ function scene25() {
       text("Hint: Push one door...", width*3/5-width/14, height*3/7+20,width/7);
     }
 
-
-
-
     /* push doors */
     if ((mouseX > width/7 && mouseX < width/7+width/6 &&
          mouseY > height/5 && mouseY < height*21/25) ||
@@ -884,6 +857,9 @@ function scene25() {
 
 }
 
+
+
+
 /* -----sceneOut9----------*/
 function sceneOut9() {
     cursor();
@@ -900,6 +876,8 @@ function sceneOut9() {
 }
 
 
+
+
 /* -----sceneOut10----------*/
 function sceneOut10() {
     cursor();
@@ -914,6 +892,10 @@ function sceneOut10() {
     }
 }
 
+
+
+
+/* -----scene3----------*/
 function scene3() {
     cursor();
     background(0);
@@ -923,59 +905,4 @@ function scene3() {
     fill(255);
     text("You have been an doctor one day.", width/2, height/2.5);
     text("What did you learn?", width/2, height/2);
-}
-
-function mousePressed() {
-
-    if (onBottle(bottle1)) {
-      bottle1.dragging = true;
-      bottle1.lastx = bottle1.x;
-      bottle1.lasty = bottle1.y;
-    } else if (onBottle(bottle2)) {
-      bottle2.dragging = true;
-      bottle2.lastx = bottle2.x;
-      bottle2.lasty = bottle2.y;
-    } else if (onBottle(bottle3)) {
-      bottle3.dragging = true;
-      bottle3.lastx = bottle3.x;
-      bottle3.lasty = bottle3.y;
-    } else if (onBottle(bottle4)) {
-      bottle4.dragging = true;
-      bottle4.lastx = bottle4.x;
-      bottle4.lasty = bottle4.y;
-    } else if (onBottle(bottle5)) {
-      bottle5.dragging = true;
-      bottle5.lastx = bottle5.x;
-      bottle5.lasty = bottle5.y;
-    }
-
-}
-
-
-function mouseReleased() {
-    // Function is called automatically when mouse is released
-    if (bottle1.dragging == true) {
-      bottle1.dragging = false;
-    } else if (bottle2.dragging == true) {
-      bottle2.dragging = false;
-    } else if (bottle3.dragging == true) {
-      bottle3.dragging = false;
-    } else if (bottle4.dragging == true) {
-      bottle4.dragging = false;
-    } else if (bottle5.dragging == true) {
-      bottle5.dragging = false;
-    }
-}
-
-function onBottle(b) {
-    pos = mouseX < (b.x+b.size) && mouseX > (b.x-b.size) && mouseY < (b.y + b.size) && mouseY > (b.y-b.size);
-    return pos;
-}
-
-function drawBottles(b) {
-    if (b.dragging) {
-      b.x = mouseX-b.size/2;
-      b.y = mouseY-b.size/2;
-    }
-    image(img6, b.x, b.y, b.size, b.size);
 }

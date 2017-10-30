@@ -33,11 +33,11 @@ function sceneNor1() {
     image(img6,width/13, height/1.53, 120, 120);
     image(img6,width/6, height/1.53, 120, 120);
     image(img6,width/3.9, height/1.53, 120, 120);
-    drawBottles(bottle1);
+    drawBottles(bottle);
 
 
     /* If medicine bottle is on the patient, then go to scene31*/
-    if (bottle1.x > width*3/5) {
+    if (bottle.x > width*3/5) {
       sceneNum = 41;
     }
 
@@ -75,11 +75,14 @@ function sceneNor2() {
     image(img6,width/13, height/1.53, 120, 120);
     image(img6,width/6, height/1.53, 120, 120);
     image(img6,width/3.9, height/1.53, 120, 120);
-    drawBottles(bottle2);
+
+    bottle.x = width/13;
+    bottle.y = height/12;
+    drawBottles(bottle);
 
 
     /* If medicine bottle is on the patient, then go to scene31*/
-    if (bottle2.x > width*3/5) {
+    if (bottle.x > width*3/5) {
       sceneNum = 43;
     }
 
@@ -117,11 +120,14 @@ function sceneNor3() {
     image(img6,width/13, height/1.53, 120, 120);
     image(img6,width/6, height/1.53, 120, 120);
     image(img6,width/3.9, height/1.53, 120, 120);
-    drawBottles(bottle3);
+
+    bottle.x = width/13;
+    bottle.y = height/12;
+    drawBottles(bottle);
 
 
     /* If medicine bottle is on the patient, then go to scene31*/
-    if (bottle3.x > width*3/5) {
+    if (bottle.x > width*3/5) {
       sceneNum = 45;
     }
 
@@ -159,11 +165,14 @@ function sceneNor4() {
     image(img6,width/13, height/1.53, 120, 120);
     image(img6,width/6, height/1.53, 120, 120);
     image(img6,width/3.9, height/1.53, 120, 120);
-    drawBottles(bottle4);
+
+    bottle.x = width/13;
+    bottle.y = height/12;
+    drawBottles(bottle);
 
 
     /* If medicine bottle is on the patient, then go to scene31*/
-    if (bottle4.x > width*3/5) {
+    if (bottle.x > width*3/5) {
       sceneNum = 47;
     }
 
@@ -201,11 +210,14 @@ function sceneNor5() {
     image(img6,width/13, height/1.53, 120, 120);
     image(img6,width/6, height/1.53, 120, 120);
     image(img6,width/3.9, height/1.53, 120, 120);
-    drawBottles(bottle5);
+
+    bottle.x = width/13;
+    bottle.y = height/12;
+    drawBottles(bottle);
 
 
     /* If medicine bottle is on the patient, then go to scene31*/
-    if (bottle5.x > width*3/5) {
+    if (bottle.x > width*3/5) {
       sceneNum = 49;
     }
 
@@ -264,4 +276,46 @@ function scenePer5() {
     var y = height/10 + random(-2, 2);
     var size = width/2.3;
     image(img7, x, y, size, size);
+}
+
+
+
+
+function mousePressed() {
+
+    if (onBottle(bottle)) {
+      bottle.dragging = true;
+      bottle.lastx = bottle.x;
+      bottle.lasty = bottle.y;
+    }
+
+}
+
+
+
+
+function mouseReleased() {
+    // Function is called automatically when mouse is released
+    if (bottle.dragging == true) {
+      bottle.dragging = false;
+    }
+}
+
+
+
+
+function onBottle(b) {
+    pos = mouseX < (b.x+b.size) && mouseX > (b.x-b.size) && mouseY < (b.y + b.size) && mouseY > (b.y-b.size);
+    return pos;
+}
+
+
+
+
+function drawBottles(b) {
+    if (b.dragging) {
+      b.x = mouseX-b.size/2;
+      b.y = mouseY-b.size/2;
+    }
+    image(img6, b.x, b.y, b.size, b.size);
 }
