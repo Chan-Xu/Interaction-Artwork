@@ -1,9 +1,10 @@
 # Interactive p5 artwork
-An interactive storytelling experience (JavaScript) - ANU@COMP1720 major project
+An interactive p5 artwork (JavaScript) - ANU@COMP1720 major project
 
 ![image](thumbnail.png)
 
-This is an interactive p5 artwork for a new-media art installation. Here’s the scenario: gallery attendees are able to walk around and observe the various works at their leisure. If they wish, they can pause at my sketch and interact with it, but they will receive no additional guidance/instruction on what to do. My goal is to provide an engaging user experience of roughly three minutes.
+This is an interactive p5 artwork for a new-media art installation. The goal is to provide an engaging user experience of roughly three minutes.<br/>
+Here’s the scenario: gallery attendees are able to walk around and observe the various works at their leisure. If they wish, they can pause at my sketch and interact with it, but they will receive no additional guidance/instruction on what to do.
 
 ### Theme ###
 
@@ -11,7 +12,7 @@ The theme is "Your Health in your Hands: Future Personalised Medical Technologie
 
 
 ### Artist Statement ###
-[Artist Statement](https://github.com/Chan-Xu/Interaction-Artwork/blob/master/artist-statement.md)
+[Artist Statement](artist-statement.md)
 
 
 ### Interaction Statement ###
