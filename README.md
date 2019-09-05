@@ -1,9 +1,24 @@
-# COMP1720 major project template
+# Interactive p5 artwork
+An interactive storytelling experience (JavaScript) - ANU@COMP1720 major project
 
-This is the big one! Make sure you read the assignment page carefully, and if
-you have questions then ask for help **early** on Piazza.
+![image](thumbnail.png)
 
-<https://cs.anu.edu.au/courses/comp1720/assignments/05-major-project/>
+This is an interactive p5 artwork for a new-media art installation. Here’s the scenario: gallery attendees are able to walk around and observe the various works at their leisure. If they wish, they can pause at my sketch and interact with it, but they will receive no additional guidance/instruction on what to do. My goal is to provide an engaging user experience of roughly three minutes.
+
+### Theme ###
+
+The theme is "Your Health in your Hands: Future Personalised Medical Technologies for a Sustainable and Effective Healthcare". It is based on the finalists for the [ANU Grand Challenge Scheme](https://www.anu.edu.au/news/all-news/vcs-update-anu-grand-challenges-scheme) -- a program designed to inspire the ANU to "look beyound the day to day address some of the biggest problems facing the world".
+
+
+### Artist Statement ###
+[Artist Statement](https://github.com/Chan-Xu/Interaction-Artwork/blob/master/artist-statement.md)
+
+
+### Interaction Statement ###
+The [interaction statement](https://github.com/Chan-Xu/Interaction-Artwork/blob/master/interaction-statement.md) describes how a typical user will interact with my artwork.
+
+## Demo video ##
+
 
 ## Setup
 
@@ -28,23 +43,10 @@ you have questions then ask for help **early** on Piazza.
 4. every time you save the `sketch.js` file, the live server will auto-update
    the sketch in Chrome
 
-5. if you add new files (e.g. new `.js` files or new assets into the `assets/`
-   folder) then make sure you add them to the repo (see `assets/README.md` for
-   instructions)
-
-### Notes
-
-This should work in all browsers, but we'll be using Chrome/Chromium in the
-labs, so it's probably best to use that.
-
-Also, if you do make a cool sketch, don't push the changes back up to the
-"template" repo (you probably don't have permission to do that anyway). Instead,
-create a new GitLab repo and push it up there.
 
 ## Resources
 
-Here are a few places you'll find useful information:
+Here are a few places to find useful information:
 
-- [COMP1720 lab 1](https://cs.anu.edu.au/courses/comp1720/labs/01-intro/)
 - [p5.js reference](https://p5js.org/reference/)
 - [course website](https://cs.anu.edu.au/courses/comp1720/)
