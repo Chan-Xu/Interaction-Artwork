@@ -18,8 +18,9 @@ The theme is "Your Health in your Hands: Future Personalised Medical Technologie
 ### Interaction Statement ###
 The [interaction statement](https://github.com/Chan-Xu/Interaction-Artwork/blob/master/interaction-statement.md) describes how a typical user will interact with my artwork.
 
-## Demo video ##
 
+## Demo video ##
+[Youtube Video for Demo](https://www.youtube.com/watch?v=kgvFOwtwmBw&t=46s)
 
 ## Setup
 
