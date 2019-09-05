@@ -7,7 +7,7 @@ This is an interactive p5 artwork for a new-media art installation. The goal is 
 Here’s the scenario: gallery attendees are able to walk around and observe the various works at their leisure. If they wish, they can pause at my sketch and interact with it, but they will receive no additional guidance/instruction on what to do.
 
 ### Demo Video ###
-[Youtube Video for Demo](https://www.youtube.com/watch?v=kgvFOwtwmBw&t=46s)
+[Youtube Video for Demo](https://youtu.be/kgvFOwtwmBw)
 
 ### Theme ###
 
